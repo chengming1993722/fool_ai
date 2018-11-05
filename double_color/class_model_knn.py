@@ -12,12 +12,10 @@ from sklearn.model_selection import GridSearchCV
 
 
 data = pd.read_csv("data/2015001.csv")
-# print(data.head())
-
 # 构建特征 目标值
 
 X = data.iloc[0: -1, 1:7]
-Y = data.iloc[1:, 7:8]
+Y = data.iloc[1:, 7:]
 
 # print(X.shape, Y.shape)
 
@@ -35,8 +33,8 @@ gc.fit(x_train, y_train)
 # 预测准确率
 print(gc.score(x_test, y_test))
 # 交叉验证中最好的结果
-# print(gc.best_score_)
+print(gc.best_score_)
 # 最好的模型
 # print(gc.best_estimator_)
 # 每个k的 验证结果
-# print(gc.cv_results_)
+print(gc.cv_results_)

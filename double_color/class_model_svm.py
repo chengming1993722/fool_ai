@@ -10,7 +10,6 @@ from sklearn.svm import LinearSVC
 import matplotlib.pyplot as plt
 import numpy as np
 
-
 data = pd.read_csv("data/2015_2018.csv")
 # 构建特征 目标值
 
